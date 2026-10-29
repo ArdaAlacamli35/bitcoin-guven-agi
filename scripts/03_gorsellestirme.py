@@ -49,7 +49,7 @@ xy = np.array(lay.coords)
 xy = (xy - xy.mean(0)) / xy.std(0)
 
 # Renkler: büyük topluluklar için ayırt edilebilir palet; çatışma kümeleri sıcak tonlarda.
-PALET = ["#4e79a7", "#59a14f", "#76b7b2", "#9c755f", "#b07aa1", "#edc948", "#86bcb6", "#d37295", "#e15759", "#f28e2b", "#a0cbe8", "#8cd17d"]
+PALET = ["#4e79a7", "#59a14f", "#76b7b2", "#9c755f", "#8f7fd8", "#edc948", "#a0cbe8", "#8cd17d", "#d37295", "#e15759", "#f28e2b", "#c9c9c9"]
 renk = {}
 soguk = iter([c for c in PALET if c not in ("#e15759", "#f28e2b", "#d37295")])
 sicak = iter(["#e15759", "#f28e2b", "#d37295", "#ff9da7"])
