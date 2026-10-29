@@ -92,6 +92,24 @@
     "negatif_alanlarin_payi": 0.21322904267981635,
     "negatif_kenarlarin_yuzde_kaci_ilk_yuzde5": 0.636261577322481
   },
+  "kirilganlik": {
+    "once": {
+      "ana_bilesen": 5875,
+      "bilesen_sayisi": 4,
+      "ort_yol": 3.5710878230065415
+    },
+    "en_merkezi_silinince": {
+      "dugum": "K28a80ce",
+      "ana_bilesen": 5561,
+      "bilesen_sayisi": 308,
+      "ort_yol": 3.645402785845411
+    },
+    "ilk10_silinince": {
+      "ana_bilesen": 5155,
+      "bilesen_sayisi": 696,
+      "ort_yol": 3.8680607794008552
+    }
+  },
   "denge": {
     "ucgen": 32944,
     "tipler": {
@@ -411,6 +429,16 @@
       "neg_z": -3.4111
     }
   ],
+  "eksi3_ucgen": {
+    "toplam": 326,
+    "tek_toplulukta": 54,
+    "T9_icinde": 10
+  },
+  "guclu_bilesen_disi": {
+    "dugum": 1172,
+    "hic_puan_vermemis": 1067,
+    "hic_puan_almamis": 23
+  },
   "null_model": {
     "kumelenme": {
       "gozlenen": 0.17750449405289517,

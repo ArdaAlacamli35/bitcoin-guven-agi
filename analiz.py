@@ -214,6 +214,25 @@ ozet["pozitif_negatif"]
 tab_neg.round(4)
 
 # %% [markdown]
+# ### 4.2 Kırılganlık: en merkezi hesaplar ağdan çıkarılırsa ne olur?
+# Betweenness'ın gerçek anlamını görmek için en yüksek betweenness'a sahip hesap (ve ilk 10) silinir; ana bileşen ve ortalama yol yeniden ölçülür.
+
+# %%
+def bilesen_ozeti(g):
+    cc = g.connected_components()
+    gc = cc.giant()
+    return {"ana_bilesen": gc.vcount(), "bilesen_sayisi": len(cc), "ort_yol": gc.average_path_length()}
+
+ilk_bt = mer["betweenness"].nlargest(10).index.tolist()
+kirilganlik = {"once": bilesen_ozeti(gUall)}
+h = gUall.copy(); h.delete_vertices([idxU[ilk_bt[0]]])
+kirilganlik["en_merkezi_silinince"] = {"dugum": ilk_bt[0], **bilesen_ozeti(h)}
+h = gUall.copy(); h.delete_vertices([idxU[v] for v in ilk_bt])
+kirilganlik["ilk10_silinince"] = bilesen_ozeti(h)
+ozet["kirilganlik"] = kirilganlik
+pd.DataFrame({k: {kk: vv for kk, vv in v.items() if kk != "dugum"} for k, v in kirilganlik.items()}).T.round(3)
+
+# %% [markdown]
 # ## 5. Yapısal denge (kişisel ileri yöntem)
 # Heider'in kuramına göre bir üçgen, üzerindeki negatif kenar sayısı **çift** ise dengelidir:
 # `+++` ("dostumun dostu dostumdur") ve `+−−` ("düşmanımın düşmanı dostumdur"). `++−` dengesizdir.
@@ -430,9 +449,34 @@ ax.axhline(neg_oran * 100, color=GRI, ls="--", lw=1)
 ax.text(d["medyan_yil"].min(), neg_oran * 100 + 0.8, f"Tüm ağ: %{neg_oran*100:.1f}", color=GRI)
 for c, r in d.iterrows():
     ax.annotate(f"T{c}", (r.medyan_yil, r.ic_neg_oran * 100), xytext=(6, 4), textcoords="offset points")
+from matplotlib.ticker import MaxNLocator
+ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 ax.set_xlabel("Topluluğun aktif olduğu yıl (medyan)"); ax.set_ylabel("İç kenarlarda negatif oran (%)")
-ax.set_title("Turuncu: negatif oranı rastlantıyla açıklanamayacak kadar yüksek (z > 2)")
+ax.set_title("Turuncu: negatif oranı rastlantıyla açıklanamayacak\nkadar yüksek (z > 2)", fontsize=10)
 fig.tight_layout(); fig.savefig(FIG / "topluluk_negatif.png", dpi=200); plt.show()
+
+# %% [markdown]
+# ### 6.3 "−−−" üçgenleri nerede? ve güçlü bileşenin dışında kim var?
+
+# %%
+eksi3 = {"toplam": 0, "tek_toplulukta": 0, "T9_icinde": 0}
+for a in range(len(s_nodes)):
+    for b in adj[a]:
+        if b <= a: continue
+        for c in adj[a] & adj[b]:
+            if c <= b: continue
+            if isaret[eidx[(a, b)]] < 0 and isaret[eidx[(a, c)]] < 0 and isaret[eidx[(b, c)]] < 0:
+                ks = {uye[s_nodes[a]], uye[s_nodes[b]], uye[s_nodes[c]]}
+                eksi3["toplam"] += 1
+                eksi3["tek_toplulukta"] += len(ks) == 1
+                eksi3["T9_icinde"] += ks == {9}
+scc_buyuk = max(scc, key=len)
+disari = [v for v in G if v not in scc_buyuk]
+ozet["eksi3_ucgen"] = eksi3
+ozet["guclu_bilesen_disi"] = {"dugum": len(disari),
+                              "hic_puan_vermemis": sum(1 for v in disari if G.out_degree(v) == 0),
+                              "hic_puan_almamis": sum(1 for v in disari if G.in_degree(v) == 0)}
+eksi3, ozet["guclu_bilesen_disi"]
 
 # %% [markdown]
 # ## 7. Null model: 100 derece korumalı rastgele ağ
