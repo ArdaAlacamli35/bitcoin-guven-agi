@@ -70,7 +70,7 @@ Tüm rastgele işlemler sabit tohumla (`SEED = 42`) çalışır. Ham veri indirm
 Bu projede **Claude (Anthropic)** kullanıldı.
 - **Hangi iş için:** Veri indirme ve ağ kurma script'leri, analiz defteri, Sigma.js görselleştirmesi ile rapor, sunum ve poster üretim script'lerinin hazırlanması.
 - **Doğrulama:** Defter baştan sona yeniden çalıştırıldı. Rapor ve sunumdaki tüm sayılar elle yazılmadı, `results/ozet.json` dosyasından otomatik okunuyor. Kontrol sırasında rapordaki iki ifade yanlış çıktı ve düzeltildi ("−−−" üçgenlerinin nerede olduğu ve güçlü bileşenin dışındaki hesapların türü). Bu iki hesap deftere ayrı hücre olarak eklendi. Topluluk adları elle verilmedi, defterdeki kurallarla türetildi.
-- **Benim katkım / değişikliklerim:** _(Arda: defteri kendin çalıştırıp incelediğinde neyi değiştirdiğini, neyi kendi cümlelerinle yeniden yazdığını buraya ekle.)_
+- **Benim katkım:** Ham veriyi SNAP'ten kendim indirip yükledim (iki kopyanın SHA-256 özeti aynı çıktı) ve GitHub deposunu oluşturdum. Kodu ben yazmadım; yöntemleri ve bulguları, sunumda kendi cümlelerimle anlatabilmek için çalışma notu üzerinden öğrendim.
 
 ## Kaynak
 
