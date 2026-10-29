@@ -1,0 +1,434 @@
+{
+  "temel": {
+    "dugum": 5881,
+    "kenar_yonlu": 35592,
+    "kenar_yonsuz": 21492,
+    "negatif_kenar_orani": 0.1001,
+    "karsilikli_cift": 14100,
+    "karsilikli_oran": 0.6561,
+    "celiskili_cift_atilan": 58,
+    "tarih_araligi": [
+      "2010-11-08",
+      "2016-01-25"
+    ]
+  },
+  "olculer": {
+    "yogunluk": 0.0010292571373048454,
+    "zayif_bilesen": 4,
+    "en_buyuk_zayif_bilesen": 5875,
+    "guclu_bilesen": 1144,
+    "en_buyuk_guclu_bilesen": 4709,
+    "ort_en_kisa_yol": 3.5710878230065415,
+    "cap": 9,
+    "ort_kumelenme": 0.17768577523831092,
+    "global_kumelenme": 0.0592384412258376,
+    "derece_benzesimi": -0.16483359451314514,
+    "derece_benzesimi_out_in": -0.16395371492959188
+  },
+  "kuvvet_yasasi": {
+    "alpha": 2.0477570512666308,
+    "xmin": 7,
+    "kuyruktaki_dugum": 1230,
+    "karsilastirma": {
+      "lognormal": {
+        "R": -3.5753326443454228,
+        "p": 0.00034978287099115646
+      },
+      "exponential": {
+        "R": 5.812554428204531,
+        "p": 6.152666944666248e-09
+      },
+      "truncated_power_law": {
+        "R": -3.835387044380775,
+        "p": 1.5822280152733015e-09
+      }
+    }
+  },
+  "merkeziyet_spearman": {
+    "derece": {
+      "derece": 1.0,
+      "betweenness": 0.894,
+      "closeness": 0.625,
+      "pagerank": 0.896,
+      "eigenvector": 0.654
+    },
+    "betweenness": {
+      "derece": 0.894,
+      "betweenness": 1.0,
+      "closeness": 0.586,
+      "pagerank": 0.827,
+      "eigenvector": 0.592
+    },
+    "closeness": {
+      "derece": 0.625,
+      "betweenness": 0.586,
+      "closeness": 1.0,
+      "pagerank": 0.486,
+      "eigenvector": 0.969
+    },
+    "pagerank": {
+      "derece": 0.896,
+      "betweenness": 0.827,
+      "closeness": 0.486,
+      "pagerank": 1.0,
+      "eigenvector": 0.502
+    },
+    "eigenvector": {
+      "derece": 0.654,
+      "betweenness": 0.592,
+      "closeness": 0.969,
+      "pagerank": 0.502,
+      "eigenvector": 1.0
+    }
+  },
+  "ilk10_ortak_pagerank_betweenness": 9,
+  "pozitif_negatif": {
+    "pozitif_kenar": 32029,
+    "negatif_kenar": 3563,
+    "spearman_pr_pos_neg_aktif": -0.06121358514561295,
+    "p": 0.018161210443180198,
+    "aktif_dugum": 1489,
+    "ilk20_kesisim": 4,
+    "negatif_alanlarin_payi": 0.21322904267981635,
+    "negatif_kenarlarin_yuzde_kaci_ilk_yuzde5": 0.636261577322481
+  },
+  "denge": {
+    "ucgen": 32944,
+    "tipler": {
+      "+++": 23365,
+      "++-": 3875,
+      "+--": 5378,
+      "---": 326
+    },
+    "guclu_denge_orani": 0.8724805730937348,
+    "zayif_denge_orani": 0.8823761534725595,
+    "null_guclu_ort": 0.675583292860612,
+    "null_guclu_std": 0.006324340539629866,
+    "z_guclu_denge": 31.133250810786713,
+    "z_tip": {
+      "+++": 10.015389629695823,
+      "++-": -33.4261810940755,
+      "+--": 36.10876170081578,
+      "---": 16.511185733764624
+    },
+    "beklenen_tip": {
+      "+++": 20433.428,
+      "++-": 10582.53,
+      "+--": 1822.988,
+      "---": 105.054
+    }
+  },
+  "topluluk": {
+    "louvain_modularite_ort": 0.48891580258621586,
+    "louvain_modularite_std": 0.0068289800120937,
+    "leiden_modularite_ort": 0.4983236609987437,
+    "leiden_modularite_std": 0.008634680302616821,
+    "louvain_topluluk_sayisi": [
+      17,
+      17,
+      19,
+      19,
+      25,
+      21,
+      21,
+      18,
+      18,
+      22
+    ],
+    "leiden_topluluk_sayisi": [
+      18,
+      24,
+      25,
+      28,
+      21,
+      26,
+      17,
+      26,
+      22,
+      20
+    ],
+    "louvain_nmi_ort": 0.6593690852818835,
+    "leiden_nmi_ort": 0.7078324630951571,
+    "louvain_ari_ort": 0.6058294896740686,
+    "leiden_ari_ort": 0.670116070604403,
+    "louvain_leiden_nmi": 0.6427118925882425
+  },
+  "negatif_kumelenme": {
+    "ic_kenar_neg_oran": 0.08963644847919229,
+    "toplulukar_arasi_neg_oran": 0.12064231633247359,
+    "z_ic_neg": -9.1883839671539,
+    "neg_kenarlarin_toplulukar_arasi_payi": 0.40696042660679205,
+    "poz_kenarlarin_toplulukar_arasi_payi": 0.32998220362796216
+  },
+  "topluluklar": [
+    {
+      "topluluk": 0,
+      "uye": 1169,
+      "ic_kenar": 5743,
+      "ic_neg_oran": 0.0317,
+      "dokunan_neg_oran": 0.0484,
+      "medyan_yil": 2011.0,
+      "ilk_yil": 2010,
+      "ort_puan": 1.7869,
+      "lider": "Kb20b6b6",
+      "neg_z": -18.5592,
+      "ilk3_veren_payi": 0.3571,
+      "eksi10_payi": 0.5,
+      "neg_veren": 86,
+      "neg_alan": 110,
+      "ad": "Kurucu çekirdek (2010–11)"
+    },
+    {
+      "topluluk": 1,
+      "uye": 1062,
+      "ic_kenar": 6244,
+      "ic_neg_oran": 0.0764,
+      "dokunan_neg_oran": 0.0967,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2010,
+      "ort_puan": 1.0684,
+      "lider": "Kfd58626",
+      "neg_z": -6.6286,
+      "ilk3_veren_payi": 0.2034,
+      "eksi10_payi": 0.7002,
+      "neg_veren": 164,
+      "neg_alan": 250,
+      "ad": "Ana pazar A (2013 dalgası)"
+    },
+    {
+      "topluluk": 2,
+      "uye": 723,
+      "ic_kenar": 3396,
+      "ic_neg_oran": 0.0592,
+      "dokunan_neg_oran": 0.0739,
+      "medyan_yil": 2012.0,
+      "ilk_yil": 2010,
+      "ort_puan": 1.4337,
+      "lider": "K7c13c2b",
+      "neg_z": -8.3262,
+      "ilk3_veren_payi": 0.1642,
+      "eksi10_payi": 0.5075,
+      "neg_veren": 95,
+      "neg_alan": 84,
+      "ad": "Ana pazar (2012 dalgası)"
+    },
+    {
+      "topluluk": 3,
+      "uye": 676,
+      "ic_kenar": 1303,
+      "ic_neg_oran": 0.0092,
+      "dokunan_neg_oran": 0.0277,
+      "medyan_yil": 2012.0,
+      "ilk_yil": 2010,
+      "ort_puan": 1.6738,
+      "lider": "K28a80ce",
+      "neg_z": -10.935,
+      "ilk3_veren_payi": 0.75,
+      "eksi10_payi": 0.5833,
+      "neg_veren": 6,
+      "neg_alan": 12,
+      "ad": "Sessiz güven halkası (2012)"
+    },
+    {
+      "topluluk": 4,
+      "uye": 629,
+      "ic_kenar": 2036,
+      "ic_neg_oran": 0.0756,
+      "dokunan_neg_oran": 0.0932,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": 1.4327,
+      "lider": "K70e1713",
+      "neg_z": -3.8875,
+      "ilk3_veren_payi": 0.4805,
+      "eksi10_payi": 0.6169,
+      "neg_veren": 54,
+      "neg_alan": 103,
+      "ad": "Ana pazar B (2013 dalgası)"
+    },
+    {
+      "topluluk": 5,
+      "uye": 533,
+      "ic_kenar": 1481,
+      "ic_neg_oran": 0.0155,
+      "dokunan_neg_oran": 0.0535,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": 1.6131,
+      "lider": "K9498d38",
+      "neg_z": -10.9717,
+      "ilk3_veren_payi": 0.6087,
+      "eksi10_payi": 0.6957,
+      "neg_veren": 10,
+      "neg_alan": 20,
+      "ad": "Sessiz güven halkası (2013)"
+    },
+    {
+      "topluluk": 6,
+      "uye": 381,
+      "ic_kenar": 1361,
+      "ic_neg_oran": 0.072,
+      "dokunan_neg_oran": 0.1018,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": 1.8707,
+      "lider": "K5be24db",
+      "neg_z": -3.4111,
+      "ilk3_veren_payi": 0.3776,
+      "eksi10_payi": 0.2143,
+      "neg_veren": 28,
+      "neg_alan": 45,
+      "ad": "Ana pazar C (2013 dalgası)"
+    },
+    {
+      "topluluk": 7,
+      "uye": 252,
+      "ic_kenar": 625,
+      "ic_neg_oran": 0.3184,
+      "dokunan_neg_oran": 0.2687,
+      "medyan_yil": 2012.0,
+      "ilk_yil": 2011,
+      "ort_puan": -1.0256,
+      "lider": "K60ebdd2",
+      "neg_z": 18.3444,
+      "ilk3_veren_payi": 0.7588,
+      "eksi10_payi": 0.8593,
+      "neg_veren": 25,
+      "neg_alan": 118,
+      "ad": "Toplu işaretleme kümesi (2012)"
+    },
+    {
+      "topluluk": 8,
+      "uye": 219,
+      "ic_kenar": 336,
+      "ic_neg_oran": 0.5298,
+      "dokunan_neg_oran": 0.3668,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": -1.497,
+      "lider": "K546b7d1",
+      "neg_z": 26.3328,
+      "ilk3_veren_payi": 0.9494,
+      "eksi10_payi": 0.382,
+      "neg_veren": 11,
+      "neg_alan": 168,
+      "ad": "Toplu işaretleme kümesi (2013)"
+    },
+    {
+      "topluluk": 9,
+      "uye": 155,
+      "ic_kenar": 877,
+      "ic_neg_oran": 0.6693,
+      "dokunan_neg_oran": 0.458,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": -5.6454,
+      "lider": "Kfa86973",
+      "neg_z": 57.9944,
+      "ilk3_veren_payi": 0.1516,
+      "eksi10_payi": 0.9864,
+      "neg_veren": 60,
+      "neg_alan": 91,
+      "ad": "Karşılıklı −10 çatışma kümesi (2013)"
+    },
+    {
+      "topluluk": 10,
+      "uye": 40,
+      "ic_kenar": 97,
+      "ic_neg_oran": 0.0206,
+      "dokunan_neg_oran": 0.0469,
+      "medyan_yil": 2011.0,
+      "ilk_yil": 2011,
+      "ort_puan": 1.9485,
+      "lider": "Kbd2e50c",
+      "neg_z": -2.5116,
+      "ilk3_veren_payi": 1.0,
+      "eksi10_payi": 0.5,
+      "neg_veren": 2,
+      "neg_alan": 2,
+      "ad": "Erken dönem küçük halka"
+    }
+  ],
+  "yuksek_negatif_topluluklar": [
+    {
+      "topluluk": 9,
+      "uye": 155,
+      "ic_kenar": 877,
+      "ic_neg_oran": 0.6693,
+      "dokunan_neg_oran": 0.458,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": -5.6454,
+      "lider": "Kfa86973",
+      "neg_z": 57.9944
+    },
+    {
+      "topluluk": 8,
+      "uye": 219,
+      "ic_kenar": 336,
+      "ic_neg_oran": 0.5298,
+      "dokunan_neg_oran": 0.3668,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": -1.497,
+      "lider": "K546b7d1",
+      "neg_z": 26.3328
+    },
+    {
+      "topluluk": 7,
+      "uye": 252,
+      "ic_kenar": 625,
+      "ic_neg_oran": 0.3184,
+      "dokunan_neg_oran": 0.2687,
+      "medyan_yil": 2012.0,
+      "ilk_yil": 2011,
+      "ort_puan": -1.0256,
+      "lider": "K60ebdd2",
+      "neg_z": 18.3444
+    },
+    {
+      "topluluk": 10,
+      "uye": 40,
+      "ic_kenar": 97,
+      "ic_neg_oran": 0.0206,
+      "dokunan_neg_oran": 0.0469,
+      "medyan_yil": 2011.0,
+      "ilk_yil": 2011,
+      "ort_puan": 1.9485,
+      "lider": "Kbd2e50c",
+      "neg_z": -2.5116
+    },
+    {
+      "topluluk": 6,
+      "uye": 381,
+      "ic_kenar": 1361,
+      "ic_neg_oran": 0.072,
+      "dokunan_neg_oran": 0.1018,
+      "medyan_yil": 2013.0,
+      "ilk_yil": 2011,
+      "ort_puan": 1.8707,
+      "lider": "K5be24db",
+      "neg_z": -3.4111
+    }
+  ],
+  "null_model": {
+    "kumelenme": {
+      "gozlenen": 0.17750449405289517,
+      "null_ort": 0.07395041756001552,
+      "null_std": 0.0018189515920786295,
+      "z": 56.93063902516611
+    },
+    "ort_yol": {
+      "gozlenen": 3.5710878230065415,
+      "null_ort": 3.496239389810874,
+      "null_std": 0.0072824227213986155,
+      "z": 10.27795777025323
+    },
+    "modularite": {
+      "gozlenen": 0.48891580258621586,
+      "null_ort": 0.3097050910550513,
+      "null_std": 0.000933846202939114,
+      "z": 191.9060236762016
+    }
+  }
+}
