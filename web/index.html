@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitcoin OTC Güven Ağı · Arda Alaçamlı</title>
+  <style>
+    :root { --gece:#121315; --duvar:#1b1c1f; --cizgi:#2b2d31; --kar:#ededee; --sis:#a3a6ad; --pencere:#f0b45e; color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--gece); color: var(--kar); font-family: "Schibsted Grotesk", "Segoe UI", system-ui, sans-serif; }
+    .uygulama { display: grid; grid-template-columns: 1fr 320px; grid-template-rows: auto 1fr; height: 100%; min-height: 560px; }
+    header { grid-column: 1 / -1; padding: 12px 16px; border-bottom: 1px solid var(--cizgi); display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: end; justify-content: space-between; }
+    h1 { font-size: 1.15rem; margin: 0; }
+    #alt { margin: 2px 0 0; color: var(--sis); font-size: .85rem; }
+    .kontroller { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; }
+    label { font-size: .75rem; color: var(--sis); display: block; margin-bottom: 3px; }
+    input[type=search], select { font: inherit; font-size: .875rem; color: var(--kar); background: var(--gece); border: 1px solid #45484f; border-radius: 6px; padding: 6px 8px; min-height: 36px; }
+    button { font: inherit; font-size: .8125rem; cursor: pointer; border-radius: 6px; min-height: 36px; padding: 6px 10px; border: 1px solid #45484f; background: var(--duvar); color: var(--kar); }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--pencere); outline-offset: 2px; }
+    .onay { display: flex; gap: 6px; align-items: center; font-size: .8125rem; min-height: 36px; }
+    .onay label { margin: 0; color: var(--kar); font-size: .8125rem; }
+    #ag { position: relative; min-height: 420px; }
+    aside { border-left: 1px solid var(--cizgi); padding: 14px 16px; overflow: auto; background: var(--duvar); }
+    aside h2 { font-size: 1.05rem; margin: 0 0 6px; }
+    dl { display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; font-size: .85rem; margin: 12px 0; }
+    dt { color: var(--sis); } dd { margin: 0; text-align: right; }
+    .mono { font-family: ui-monospace, Consolas, monospace; }
+    .soluk { color: var(--sis); font-size: .85rem; }
+    .uyari { color: var(--pencere); font-size: .85rem; border-left: 3px solid var(--pencere); padding-left: 8px; }
+    .chip { display: inline-block; margin: 0; padding: 2px 8px 2px 18px; border-radius: 999px; background: var(--gece); font-size: .8rem; position: relative; }
+    .chip::before { content: ""; position: absolute; left: 6px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: var(--c); }
+    #lejant { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 14px; }
+    .leg { min-height: 28px; padding: 2px 8px 2px 20px; position: relative; font-family: ui-monospace, Consolas, monospace; font-size: .75rem; }
+    .leg::before { content: ""; position: absolute; left: 7px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: var(--c); }
+    .leg[aria-pressed=true] { border-color: var(--pencere); }
+    #not { margin-top: 14px; font-size: .75rem; color: #8a8f98; }
+    #durum { color: var(--pencere); font-size: .8rem; min-height: 1em; margin: 4px 0 0; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    @media (max-width: 760px) {
+      .uygulama { grid-template-columns: 1fr; grid-template-rows: auto 60vh auto; height: auto; }
+      aside { border-left: 0; border-top: 1px solid var(--cizgi); }
+    }
+  </style>
+</head>
+<body>
+  <div class="uygulama">
+    <header>
+      <div>
+        <h1 id="baslik">Bitcoin OTC güven ağı</h1>
+        <p id="alt"></p>
+      </div>
+      <div class="kontroller">
+        <form id="ara-form" role="search">
+          <label id="ara-label" for="ara" class="sr">Ara</label>
+          <input id="ara" type="search" list="kimlikler" autocomplete="off" maxlength="10">
+          <datalist id="kimlikler"></datalist>
+        </form>
+        <div>
+          <label id="topluluk-label" for="topluluk">Topluluk</label>
+          <select id="topluluk"></select>
+        </div>
+        <div class="onay"><input id="neg" type="checkbox"><label id="neg-label" for="neg"></label></div>
+        <button id="sifirla" type="button"></button>
+        <button id="dil" type="button" lang="en"></button>
+      </div>
+    </header>
+    <div id="ag" role="img" aria-label="Güven ağı görselleştirmesi"></div>
+    <aside aria-live="polite">
+      <p id="durum" role="status"></p>
+      <div id="detay"></div>
+      <div id="lejant"></div>
+      <p id="not"></p>
+    </aside>
+  </div>
+  <script type="module" src="./ag.js"></script>
+</body>
+</html>
