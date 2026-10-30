@@ -119,8 +119,8 @@ S(f"İtibar ve güvensizlik ayrı şeyler: pozitif ve negatif PageRank neredeyse
 
 # 9 — Cevap
 S("Cevap: Ağ dengeli, güvensizlik sınırlarda, ama üç küme ayrı ayrı incelenmeli", f"""
-<div class="iki"><div class="vurgu"><p class="buyuk">Soru 2: Dengeli mi?</p><p><b>Evet.</b> Dengeli üçgen oranı {pct(dg['guclu_denge_orani'])}, rastgele {pct(dg['null_guclu_ort'])}; z = {n(dg['z_guclu_denge'],0)}. "Düşmanımın düşmanı dostumdur" rastlantıdan {n(tip['+--']/bek['+--'],1)} kat sık.</p></div>
-<div class="vurgu turuncu"><p class="buyuk">Soru 1: Kümeleniyor mu?</p><p><b>Genelde hayır:</b> Güvensizlik toplulukların arasında. <b>Üç istisna:</b> T7–T8'de birkaç hesap çok kişiyi toplu işaretliyor, T9'da karşılıklı −10 çatışması var. İki farklı mekanizma, tek bir "negatif oran" ile ayırt edilemez.</p></div></div>""")
+<div class="iki"><div class="vurgu turuncu"><p class="buyuk">Soru 1: Kümeleniyor mu?</p><p><b>Genelde hayır:</b> Güvensizlik toplulukların arasında. <b>Üç istisna:</b> T7–T8'de birkaç hesap çok kişiyi toplu işaretliyor, T9'da karşılıklı −10 çatışması var. İki farklı mekanizma, tek bir "negatif oran" ile ayırt edilemez.</p></div>
+<div class="vurgu"><p class="buyuk">Soru 2: Dengeli mi?</p><p><b>Evet.</b> Dengeli üçgen oranı {pct(dg['guclu_denge_orani'])}, rastgele {pct(dg['null_guclu_ort'])}; z = {n(dg['z_guclu_denge'],0)}. "Düşmanımın düşmanı dostumdur" rastlantıdan {n(tip['+--']/bek['+--'],1)} kat sık.</p></div></div>""")
 
 # 10 — Sınırlar
 S("Sınırlar: Bu ağ kimin dolandırıcı olduğunu söylemez", """
